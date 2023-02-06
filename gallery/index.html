@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>catalogo</h1>
+        <div class="image-container">
+            <div class="image"><img src="img/[1995] Toy Story [Poster].jpg"></div>
+            <div class="image"><img src="img/[1999] The Matrix [Poster].jpg"></div>
+            <div class="image"><img src="img/[1999] Toy Story 2 [Poster].jpg"></div>
+            <div class="image"><img src="img/[2001] Harry Potter And The Philosopher's Stone [Poster].jpg"></div>
+            <div class="image"><img src="img/[2001] The Fast and the Furious [Poster].jpg"></div>
+            <div class="image"><img src="img/[2001] The Lord of the Rings The Fellowship of the Ring [Poster].jpg"></div>
+            <div class="image"><img src="img/[2002] Harry Potter And The Chamber of Secrets [Poster].jpg"></div>
+            <div class="image"><img src="img/[2002] The Lord of the Rings The Two Towers [Poster].jpg"></div>
+            <div class="image"><img src="img/[2003] 2 Fast 2 Furious [Poster].jpg"></div>
+            <div class="image"><img src="img/[2003] Pirates Of The Caribbean The Curse Of The Black Pearl [Poster].jpg"></div>
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="img/[1995] Toy Story [Poster].jpg">
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+
+    </script>
+
+</body>
+</html>
